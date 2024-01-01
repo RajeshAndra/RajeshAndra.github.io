@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      background-color: #1f2833;
+      color: white;
+      transition: all 0.3s ease;
+    }
+    header{
+      background-color: #0b0c10;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #0b0c10; 
+      padding: 10px 0;
+      
+    }
+    nav a {
+      color: #45a29e; 
+      text-decoration: none;
+      padding: 10px 20px;
+      transition: color 0.3s ease;
+      
+    }
+    nav a:hover {
+      color: #66fcf1; 
+    }
+    section {
+      display: none; 
+      padding: 20px;
+      margin: 20px;
+      background-color: #1f2833;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    h2 {
+      color: #66fcf1;
+    }
+    footer {
+      background-color: #0b0c10;
+      color: #c5c6c7;
+      padding: 0px;
+      position: fixed; 
+      bottom: 0;
+      width: 100%;
+    }
+    section:target {
+      display: block;
+      animation: slideIn 0.6s ease;
+    }
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .project{
+      padding: 10px;
+      margin: 10px;
+      background-color: #232d3a;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .link{
+      display: inline;
+      word-wrap: break-word;
+      
+      color: #c5c6c7;
+      text-decoration: none;
+    }
+
+    h1 h3 p{
+      color: #c5c6c7;
+    }
+
+    @media screen and (max-width:426px){
+      img.photo{
+        max-width: 90%;
+      }
+      a.link{
+        padding: 8%;
+      }
+      section#projects{
+        margin-bottom: 17%;
+      }
+    }
+
+    @media screen and (min-width:426px) and (max-width:1023px){
+      img.photo{
+        max-width: 50%;
+      }
+      a.link{
+        padding: 12%;
+      }
+      section#projects{
+        margin-bottom: 9%;
+      }
+    }
+
+    @media screen and (min-width:1024px){
+      img.photo{
+        max-width: 40%;
+      }
+      a.link{
+        padding: 14%;
+      }
+      section#projects{
+        margin-bottom: 4%;
+      }
+    }
+
+    
+  </style>
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelector('#home-link').click();
+    });
+  </script>
+</head>
+<body>
+  
+  <header>
+    <h1>My Name</h1>
+  </header>
+  <nav>
+    <a href="#home" id = "home-link">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <section id="home">
+  <div style="display: flex; align-items: center;">
+    <div style="flex: 1;">
+      <h2>Home</h2>
+      <p>Welcome to my website!</p>
+      <p>This is my portfolio!</p>
+    </div>
+    <div style="flex: 1;">
+      <img class='photo' src="https://i.pinimg.com/564x/82/7d/2a/827d2a0356b7aa963ca232ae1b153b29.jpg" alt="Sample Image" style="height: auto; border-radius:50%;">
+    </div>
+  </div>
+</section>
+  <section id="about">
+    <h2>About</h2>
+    <p>Mention about yourself</p>
+  </section>
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>Title 1</h3>
+      <p>I did this!</p>
+    </div>
+
+    <div class="project">
+      <h3>Title 2</h3>
+      <p>I did this!</p>
+    </div>
+
+    <div class="project">
+      <h3>Title 3</h3>
+      <p>I did this!</p>
+    </div>
+
+    <div class="project">
+      <h3>Title 4</h3>
+      <p>I did this!</p>
+    </div>
+    
+  </section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Provide your contact details</p>
+    <p>Email</p>
+    <p>GitHub</p>
+    <p>LinkedIn</p>
+  </section>
+  <footer style="padding: 15px;">
+      <a class="link" href="">Email</a>
+      <a class="link" href="">GitHub</a>
+      <a class="link" href="">LinkedIn</a>
+      
+  </footer>
+</body>
+</html>
